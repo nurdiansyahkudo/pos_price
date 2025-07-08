@@ -2,9 +2,8 @@
     "name": "POS Format Price Without Decimal",
     "depends": ["point_of_sale"],
     "assets": {
-        "point_of_sale.assets": [
-            "pos_price/static/src/js/orderline.js",
-            "pos_price/static/src/xml/orderline.xml",
+        "point_of_sale._assets_pos": [
+            "pos_price/static/src/js/custom_receipt_screen.js",
         ],
     },
     "installable": True,
