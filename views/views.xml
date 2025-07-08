@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="pos_price.list">
+      <field name="name">pos_price list</field>
+      <field name="model">pos_price.pos_price</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="pos_price.action_window">
+      <field name="name">pos_price window</field>
+      <field name="res_model">pos_price.pos_price</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="pos_price.action_server">
+      <field name="name">pos_price server</field>
+      <field name="model_id" ref="model_pos_price_pos_price"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="pos_price" id="pos_price.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="pos_price.menu_1" parent="pos_price.menu_root"/>
+    <menuitem name="Menu 2" id="pos_price.menu_2" parent="pos_price.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="pos_price.menu_1_list" parent="pos_price.menu_1"
+              action="pos_price.action_window"/>
+    <menuitem name="Server to list" id="pos_price" parent="pos_price.menu_2"
+              action="pos_price.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+        <xpath expr="//t[@t-esc='line.price']" position="replace">
+            <t t-esc="formattedLine.price" />
+        </xpath>
+        <xpath expr="//t[@t-esc='line.unitPrice']" position="replace">
+            <t t-esc="formattedLine.unitPrice" />
+        </xpath>
+        <xpath expr="//s[@t-esc='line.oldUnitPrice']" position="replace">
+            <s t-esc="formattedLine.oldUnitPrice" />
+        </xpath>
+        <xpath expr="//t[@t-esc='line.price_without_discount']" position="replace">
+            <t t-esc="formattedLine.price_without_discount" />
+        </xpath>
+    </t>
+</templates>
